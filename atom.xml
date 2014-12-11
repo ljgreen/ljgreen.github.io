@@ -5,8 +5,8 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Tony Landis</title>
- <link href="http://tonylandis.com/atom.xml" rel="self"/>
- <link href="http://tonylandis.com/"/>
+ <link href="http://ljgreen.github.com/atom.xml" rel="self"/>
+ <link href="http://ljgreen.github.com/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://henrik.nyh.se/</id>
  <author>
