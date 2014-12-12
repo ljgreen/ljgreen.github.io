@@ -1,0 +1,15 @@
+---
+layout: posts
+categories: recording 
+title: Open my first blog
+---
+
+Open my first blog
+===
+
+It is so exciting to own my blog, I would like to share my 
+experience with you!
+Here is my blog [ljgreen](https://ljgreen.github.io).
+
+
+
