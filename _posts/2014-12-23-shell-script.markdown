@@ -8,7 +8,7 @@ Studying something new every day
 
 We can print home directory using command: 
 <pre><code>$echo $HOME</code></pre>
-Don't put any space on either side of ‘=’ when assigning value
+Don't put any space on either side of **‘=’** when assigning value
 
 Value are case-sensitive, so **no,No,nO,NO** are different with each other
 
@@ -54,9 +54,8 @@ The shell script can return two types of values after it has been executed:
 0 represents the command is successful;
 Nonzero means the command is failure.
 
-To determine the exist status, you can use the command <pre><code>
-$echo $? 
-</code></pre>
+To determine the exist status, you can use the command 
+`$echo $?` 
 Input value from your keyboard and store this data to variable.
 <pre><code>
 echo "Your first name please:"
