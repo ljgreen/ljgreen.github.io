@@ -10,9 +10,9 @@ We can print home directory using command:
 <pre><code>$echo $HOME</code></pre>
 Don't put any space on either side of ‘=’ when assigning value
 
-Value are case-sensitive, so no,No,nO,NO are different with each other
+Value are case-sensitive, so **no,No,nO,NO** are different with each other
 
-Don’t use punctuation such as ‘?,*,etc.’ as your variable name
+Don’t use punctuation such as ** ‘?,*,etc.’ **as your variable name
 
 To print computing results of two numbers:
 <pre><code>
@@ -86,7 +86,7 @@ $2 is 8
 $3 is 24
 </code></pre>
 Filter: If a Linux command accepts its input from the standard input and produces its output on standard output is know as a filter.
-Standard input -> standard output 
+*Standard input -> standard output* 
 
 Tail command is to print file to standard output from the specific point;
 <pre><code>
@@ -101,6 +101,7 @@ The & at the end of command tells shells start process (ls / -R | wc -l) and run
 $ ls / -R | wc -l &
 </code></pre>
 
+![figure](../figure/linux_command_related_with_process.png)
 <img class="indent" src="https://github.com/ljgreen/ljgreen.github.com/figure/linux_command_related_with_process.png" border="0" alt="" width="500" />
 
 
