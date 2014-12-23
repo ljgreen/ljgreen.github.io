@@ -12,7 +12,7 @@ Don't put any space on either side of ‘=’ when assigning value
 
 Value are case-sensitive, so **no,No,nO,NO** are different with each other
 
-Don’t use punctuation such as _‘?,*,etc.’_as your variable name
+Don’t use punctuation such as**‘?,!,etc.’**as your variable name
 
 To print computing results of two numbers:
 <pre><code>
