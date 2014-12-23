@@ -67,7 +67,6 @@ Your first name please: vivek
 Hello vivek, Lets be friend!
 
 Wild card(百搭牌)
-<pre><code>
 <table>
 <tbody>
 <tr><td>*</td><td>Match any string or group of characters	</td><td>$ls *.c show all files having extension .c</td></tr>
@@ -75,7 +74,6 @@ Wild card(百搭牌)
 <tr><td>[…]</td><td>Match any of enclosed character</td><td>$ls [abc].c show all files having extension .c and starting with letters a,b,c</td></tr>
 </tbody>
 </table>
-</code></pre>
 Command line arguments
 <pre><code>
 $findBS 4 8 24
