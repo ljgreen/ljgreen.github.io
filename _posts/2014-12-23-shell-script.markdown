@@ -39,15 +39,15 @@ Then execute printing message”Hello Colorful World!”
 How to find out the running process?
 <pre><code>
 $ ps aux or $ ps ax | grep  process-you-want-to-search
-<code></pre>
+</code></pre>
 Some echo examples.
 <pre><code>
 $ echo "Today is date" 
-<code></pre>
+</code></pre>
 Can't print message with today's date. It will print Today is date.
 <pre><code>
 $echo "Today is `date`" 
-<code></pre>
+</code></pre>
 It will print today's date as: Today is Tuesday.
 
 The shell script can return two types of values after it has been executed:
@@ -56,13 +56,13 @@ Nonzero means the command is failure.
 
 To determine the exist status, you can use the command <pre><code>
 $echo $? 
-<code></pre>
+</code></pre>
 Input value from your keyboard and store this data to variable.
 <pre><code>
 echo "Your first name please:"
 read fname
 echo "Hello $fname, Lets be friend!" 
-<code></pre>
+</code></pre>
 The executing results is something like:
 Your first name please: vivek
 Hello vivek, Lets be friend!
@@ -84,14 +84,14 @@ $0 is findBS
 $1 is 4
 $2 is 8
 $3 is 24
-<code></pre>
+</code></pre>
 Filter: If a Linux command accepts its input from the standard input and produces its output on standard output is know as a filter.
 Standard input -> standard output 
 
 Tail command is to print file to standard output from the specific point;
 <pre><code>
 $ tail +20 < hotel.txt | head -n30 >hlist
-<code></pre>
+</code></pre>
 Process is a program has its own PID(from 0 to 65535)
 
 Tail command is to print file to standard output from the specific point
@@ -99,7 +99,7 @@ Tail command is to print file to standard output from the specific point
 The & at the end of command tells shells start process (ls / -R | wc -l) and run it in background takes next command immediately
 <pre><code>
 $ ls / -R | wc -l &
-<code></pre>
+</code></pre>
 
 <img class="indent" src="https://github.com/ljgreen/ljgreen.github.com/figure/linux_command_related_with_process.png" border="0" alt="" width="500" />
 
