@@ -1,9 +1,9 @@
 --- 
 layout: posts
 categories: shell
-title: linux shell script-Decision making
+title: Decision making-linux shell script
 ---
-Studying something new every day -- study2
+Studying something new every day 
 ======================
 `echo -e "i will use \n $HOME"` 
 
