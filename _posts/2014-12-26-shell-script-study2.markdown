@@ -3,7 +3,7 @@ layout: posts
 categories: shell
 title: linux shell script-Decision making
 ---
-Studying something new every day
+Studying something new every day -- study2
 ======================
 `echo -e "i will use \n $HOME"` 
 
