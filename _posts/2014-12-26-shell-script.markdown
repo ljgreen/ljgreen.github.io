@@ -5,14 +5,16 @@ title: linux shell script-Decision making
 ---
 Studying something new every day
 ======================
-* `echo -e "i will use \n $HOME"` 
+`echo -e "i will use \n $HOME"` 
+
 >printing:**i will use /root(directory represented by $HOME)**
 
-* `echo "i will use \n $HOME"` 
+`echo "i will use \n $HOME"` 
 >printing:**i will use \n $HOME**
 
 * `echo -n "i will"` 
 * `echo "use $HOME"` 
+
 >printing:**i will use $HOME**. output doesn't make a newline.
 
 `test` command:
@@ -30,7 +32,9 @@ Studying something new every day
 <li>-r ---Is read-only</li>
 <li>-x ---Is file is executable</li>
 </ol>
-****************************************************************************
+**********************************************************
+
+
   test  File1 –ef  File2　　　　　　　　两个文件具有同样的设备号和i结点号
 
   test  File1 –nt  File2　　　　　　　　文件1比文件2 新
@@ -74,7 +78,9 @@ Studying something new every day
 　　test –w File　　　　　　　　文件存在并且可写
 
 　　test –x File　　　　　　　　文件存在并且可执行
-****************************************************************************
+**********************************************************
+
+
 * **$#** represents the number of arguments.
 * nesting of if-elif-fi
 <pre><code>
@@ -177,7 +183,10 @@ case $rental in
    *) echo "Sorry, I can not gat a $rental for you";;
 esac
 </code></pre>
+
 * de-bug shell script
+
+
 >-v Print shell input lines as they are read.
 
 >-x After expanding each simple-command, bash displays the expanded value of PS4 system variable, followed by the command and its expanded arguments.
