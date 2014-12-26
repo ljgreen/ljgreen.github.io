@@ -12,13 +12,13 @@ Studying something new every day
 `echo "i will use \n $HOME"` 
 >printing:**i will use \n $HOME**
 
-* `echo -n "i will"` 
-* `echo "use $HOME"` 
+`echo -n "i will"` 
+`echo "use $HOME"` 
 
 >printing:**i will use $HOME**. output doesn't make a newline.
 
 `test` command:
-><ol>
+<ol>
 <li>-eq ---is equal to</li>
 <li>-ne ---is not equal to</li>
 <li>-lt ---is less than</li>
@@ -32,7 +32,6 @@ Studying something new every day
 <li>-r ---Is read-only</li>
 <li>-x ---Is file is executable</li>
 </ol>
-**********************************************************
 
 
   test  File1 –ef  File2　　　　　　　　两个文件具有同样的设备号和i结点号
@@ -78,11 +77,10 @@ Studying something new every day
 　　test –w File　　　　　　　　文件存在并且可写
 
 　　test –x File　　　　　　　　文件存在并且可执行
-**********************************************************
 
 
-* **$#** represents the number of arguments.
-* nesting of if-elif-fi
+**$#** represents the number of arguments.
+**nesting of if-elif-fi**
 <pre><code>
 #!/bin/sh
 # Script to test if..elif...else
@@ -99,7 +97,7 @@ else
   echo "Opps! $1 is not number, give number"
 fi
 </code></pre>
-* Loop for i in lists
+**Loop for i in lists**
 <pre><code>
 #!/bin/sh
 #
@@ -119,7 +117,7 @@ do
 echo "$n * $i = `expr $i \* $n`"
 done
 </code></pre>
-* The following code will print chess board on the screen.
+**The following code will print chess board on the screen.**
 <pre><code>
 $ vi chessboard
 for (( i = 1; i <= 9; i++ )) ### Outer for loop ###
@@ -138,7 +136,7 @@ do
  echo "" #### print the new line ###
 done
 </code></pre>
-* Loop while [ condition ]
+**Loop while [ condition ]**
 <pre><code>
 #!/bin/sh
 #
@@ -160,7 +158,7 @@ do
   i=`expr $i + 1`
 done
 </code></pre>
-* case statement
+**case statement**
 <pre><code>
 # if no vehicle name is given
 # i.e. -z $1 is defined and it is NULL
@@ -184,8 +182,7 @@ case $rental in
 esac
 </code></pre>
 
-* de-bug shell script
-
+**de-bug shell script**
 
 >-v Print shell input lines as they are read.
 
