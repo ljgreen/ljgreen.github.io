@@ -5,18 +5,6 @@ title: Decision making-linux shell script
 ---
 Studying something new every day 
 ======================
-`echo -e "i will use \n $HOME"` 
-
->printing:**i will use /root(directory represented by $HOME)**
-
-`echo "i will use \n $HOME"` 
->printing:**i will use \n $HOME**
-
-`echo -n "i will"` 
-`echo "use $HOME"` 
-
->printing:**i will use $HOME**. output doesn't make a newline.
-
 `test` command:
 <ol>
 <li>-eq ---is equal to</li>
