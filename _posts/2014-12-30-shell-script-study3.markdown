@@ -239,6 +239,7 @@ trap del_file 2
 Take_input1
 </code></pre>
 **Note：** trap [commands] [serial number],as is shown in the shell script listed above, *trap del_file 2* .
+
 ##shift Command
 <pre><code>
 $ vi shiftdemo.sh
@@ -284,6 +285,7 @@ echo "$num Decimal number = $output in $basesystem number system(base=$ob)"
 **obase**: is the target nubmer(十六进制);
 
 **|**： use pipeline command to store the output of *echo* in the variable *bc*.
+
 ##getopts command
 <pre><code>
 #!/bin/bash
