@@ -55,6 +55,7 @@ $ echo $vech
 </code></pre>
 
 >print:Bus
+
 ###global shell variable
 <pre><code>
 $ vech=Bus
@@ -77,12 +78,14 @@ $ echo $vech
 </code></pre>
 
 >print:Bus
+
 ##Conditional execution i.e. && and ||
 <pre><code>
 $ rm myf && echo "File is removed successfully" || echo "File is not removed"
 </code></pre>
 
 >If file (myf) is removed successful (exist status is zero) then "echo File is removed successfully" statement is executed, otherwise "echo File is not removed" statement is executed (since exist status is non-zero)
+
 ##I/O Redirection and file descriptors
 
 <pre><code>
