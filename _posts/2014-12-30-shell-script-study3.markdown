@@ -57,6 +57,7 @@ $ echo $vech
 >print:Bus
 
 ###global shell variable
+
 <pre><code>
 $ vech=Bus
 $ echo $vech
@@ -80,6 +81,7 @@ $ echo $vech
 >print:Bus
 
 ##Conditional execution i.e. && and ||
+
 <pre><code>
 $ rm myf && echo "File is removed successfully" || echo "File is not removed"
 </code></pre>
