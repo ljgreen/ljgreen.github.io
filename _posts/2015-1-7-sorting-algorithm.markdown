@@ -88,8 +88,8 @@ void shellsort1(int a[], int n)
 {  
     int i, j, gap;  
   
-    for (gap = n / 2; gap > 0; gap /= 2) //步长  
-        for (i = 0; i < gap; i++)        //直接插入排序  
+    for (gap = n / 2; gap > 0; gap /= 2) ###步长  
+        for (i = 0; i < gap; i++)        ###直接插入排序  
         {  
             for (j = i + gap; j < n; j += gap)   
                 if (a[j] < a[j - gap])  
@@ -176,24 +176,25 @@ void BubbleSort1(int a[], int n)
 * 设定两个指针，最初位置分别为两个已经排序序列的起始位置
 * 比较两个指针所指向的元素，选择相对小的元素放入到合并空间，并移动指针到下一位置
 * 重复步骤3，直到某一指针达到序列尾
-* 将另一序列剩下的所有元素直接复制到合并序列尾
+* 将另一序列剩下的所有元素直接复制到合并序列尾.
+
 
 ###代码：
 
 <pre><code>
+
 #include <stdio.h>
 #include <stdlib.h>
 int sig = 0;
-/*********************************************************
-*函数名称：Merge
-*参数说明：pDataArray 无序数组；
-*          int *pTempArray 临时存储合并后的序列
-*          b 需要合并的序列1的起始位置
-*          m 需要合并的序列1的结束位置
+函数名称：Merge
+参数说明：pDataArray 无序数组；
+          int *pTempArray 临时存储合并后的序列
+          b 需要合并的序列1的起始位置
+          m 需要合并的序列1的结束位置
                   并且作为序列2的起始位置
-*          e 需要合并的序列2的结束位置
-*说明：    将数组中连续的两个子序列合并为一个有序序列
-*/
+          e 需要合并的序列2的结束位置
+说明：    将数组中连续的两个子序列合并为一个有序序列
+
 void merge(int* pDataArray, int *pTempArray, int b, int m, int e)
 {
     int mLength = e - b;
@@ -272,12 +273,13 @@ int main()
 
     system("pause");
 }
+
 </code></pre>
+
 
 ##堆排序
 
 ###代码：
-
 
 <pre><code>
 #include <stdio.h>
@@ -342,17 +344,16 @@ int main()
 }
 </code></pre>
 
+
 ##基数排序
 
 ###代码：
 
 <pre><code>
-/******************************************************** 
-*函数名称：GetNumInPos 
-*参数说明：num 一个整形数据 
-*          pos 表示要获得的整形的第pos位数据 
-*说明：    找到num的从低到高的第pos位的数据 
-*********************************************************/  
+函数名称：GetNumInPos 
+参数说明：num 一个整形数据 
+          pos 表示要获得的整形的第pos位数据 
+说明：    找到num的从低到高的第pos位的数据 
 int GetNumInPos(int num,int pos)  
 {  
     int temp = 1;  
@@ -362,12 +363,10 @@ int GetNumInPos(int num,int pos)
     return (num / temp) % 10;  
 }  
   
-/******************************************************** 
-*函数名称：RadixSort 
-*参数说明：pDataArray 无序数组； 
-*          iDataNum为无序数据个数 
-*说明：    基数排序 
-*********************************************************/  
+函数名称：RadixSort 
+参数说明：pDataArray 无序数组； 
+          iDataNum为无序数据个数 
+说明：    基数排序 
 #define RADIX_10 10    //整形排序  
 #define KEYNUM_31 10     //关键字个数，这里为整形位数  
 void RadixSort(int* pDataArray, int iDataNum)  
