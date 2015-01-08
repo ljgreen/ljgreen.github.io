@@ -172,6 +172,7 @@ void BubbleSort1(int a[], int n)
 * 将另一序列剩下的所有元素直接复制到合并序列尾
 
 ###代码：
+
 <pre><code>
 #include <stdio.h>
 #include <stdlib.h>
@@ -267,7 +268,9 @@ int main()
 </code></pre>
 
 ##堆排序
+
 ##代码：
+
 <pre><code>
 #include <stdio.h>
 #include <stdio.h>
@@ -332,7 +335,9 @@ int main()
 </code></pre>
 
 ##基数排序
+
 ##代码：
+
 <pre><code>
 ******************************************************** 
 *函数名称：GetNumInPos 
