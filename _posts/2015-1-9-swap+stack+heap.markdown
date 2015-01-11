@@ -18,7 +18,7 @@ void swap(int a,int b)
 #!/bin/bash
 cat $1|awk -F "  " '{print $1}'|while read line
 do
-wget wget http://...../$line &
+wget http://...../$line &
 done
 </code></pre>
 <ol>
