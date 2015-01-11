@@ -13,6 +13,14 @@ void swap(int a,int b)
     a=a^b;  
 }
 </code></pre>
+> 使用wget从网站下载文件时候，不知道为什么wget -r不能够下载这一目录的所有文件于是，我把文件名都复制下来，用awk处理一下也可以了
+<pre><code>
+#!/bin/bash
+cat $1|awk -F "  " '{print $1}'|while read line
+do
+wget wget http://...../$line &
+done
+</code></pre>
 <ol>
 <li>
 二叉树结点的度数指该结点所含子树的个数，二叉树结点子树个数最多的那个结点的度为二叉树的度。
