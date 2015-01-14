@@ -43,5 +43,15 @@ title: Jian Liu
   </ul>
   
 </div>
-<div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'http://ljgreen.github.io/', 'user' : 1155961, 'server' : '4', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2015-01-13', 'lang' : 'zh', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www4.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www4.clustrmaps.com/user/59d11a379"><img src="http://www4.clustrmaps.com/stats/maps-no_clusters/ljgreen.github.io--thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
-
+<a href="http://www4.clustrmaps.com/counter/maps.php?url=http://ljgreen.github.io/" id="clustrMapsLink"><img src="http://www4.clustrmaps.com/counter/index2.php?url=http://ljgreen.github.io/" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" />
+</a>
+<script type="text/javascript">
+function cantload() {
+img = document.getElementById("clustrMapsImg");
+img.onerror = null;
+img.src = "http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg";
+document.getElementById("clustrMapsLink").href = "http://www2.clustrmaps.com";
+}
+img = document.getElementById("clustrMapsImg");
+img.onerror = cantload;
+</script>
