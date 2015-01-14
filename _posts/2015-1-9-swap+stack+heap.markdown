@@ -21,6 +21,14 @@ do
 wget http://...../$line &
 done
 </code></pre>
+>将目录$1下的文件解压缩并存储到目录$2下
+<pre><code>
+#!/bin/bash
+for f in `ls $1`
+do
+tar -zxvf $1/$f -C $2
+done
+</code></pre>
 <ol>
 <li>
 二叉树结点的度数指该结点所含子树的个数，二叉树结点子树个数最多的那个结点的度为二叉树的度。
