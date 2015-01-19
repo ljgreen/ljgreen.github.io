@@ -1,7 +1,7 @@
 --- 
 layout: posts
 categories: sorting
-title:gnuplot software using summary
+title:gnuplot software summary
 ---
 ##Study something new every day!
 > 学习一下画图软件gnuplot，刚上手感觉还可以，和MATLAB有点相似，但是要把图画的更好，需要不断的积累。
