@@ -29,6 +29,16 @@ do
 tar -zxvf $1/$f -C $2
 done
 </code></pre>
+>echo 写入文件
+<pre><code>
+#!/bin/bash
+i=0
+for f in `cat $1`
+do
+echo "$i:$f" >> $2
+i=`expr $i + 1`
+done
+</code></pre>
 <ol>
 <li>
 二叉树结点的度数指该结点所含子树的个数，二叉树结点子树个数最多的那个结点的度为二叉树的度。
