@@ -1,6 +1,6 @@
 --- 
 layout: posts
-categories: sorting
+categories: gnuplot
 title:gnuplot software summary
 ---
 ##Study something new every day!
@@ -16,7 +16,7 @@ set xlabel "data chunks"
 set ylabel "duplicate state" 
 set xrange [0:10]
 set yrange [0:10]
-# set xtics 1
+set xtics 1
 set datafile separator ':'
 plot datafile using ($1), '' using ($2)
 </code></pre>
