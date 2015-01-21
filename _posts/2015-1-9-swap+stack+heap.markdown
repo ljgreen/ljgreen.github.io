@@ -42,22 +42,31 @@ done
 >解压缩文件
 <pre><code>
 #!/bin/bash
-for file in `ls $1|grep 'gz$'`
+for file in `ls $1|grep 'tar.gz$'`
 do
-tar -zxvf $1/$file -C $2
+mkdir $2/${file::12}
+tar -zxvf $1/$file -C $2/${file::12}/
 done
-for file1 in `ls $1|grep 'xz$'`
+#!/bin/bash
+for file in `ls $1|grep 'tar.xz$'`
 do
-xz -d $1/$file1 -C $2
+mkdir $2/${file::12}
+xz -d $1/$file -C $2/${file::12}/
 done
-for file2 in `ls $1|grep 'bz2$'`
-do
-tar -xjf $1/$file2 -C $2
-done
+
+#!/bin/bash
 for file3 in `ls $1|grep 'sign$'`
 do
-cp $1/file3 $2
+cp $1/$file3 $2
 done
+
+#!/bin/bash
+for file in `ls $1|grep '^patch'|grep 'xz$'`
+do
+mkdir $2/${file::7}
+xz -d $1/$file -C $2/${file::7}
+done
+
 </code></pre>
 <ol>
 <li>
