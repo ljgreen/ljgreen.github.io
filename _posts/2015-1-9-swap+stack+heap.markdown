@@ -39,6 +39,26 @@ echo "$i:$f" >> $2
 i=`expr $i + 1`
 done
 </code></pre>
+>解压缩文件
+<pre><code>
+#!/bin/bash
+for file in `ls $1|grep 'gz$'`
+do
+tar -zxvf $1/$file -C $2
+done
+for file1 in `ls $1|grep 'xz$'`
+do
+xz -d $1/$file1 -C $2
+done
+for file2 in `ls $1|grep 'bz2$'`
+do
+tar -xjf $1/$file2 -C $2
+done
+for file3 in `ls $1|grep 'sign$'`
+do
+cp $1/file3 $2
+done
+</code></pre>
 <ol>
 <li>
 二叉树结点的度数指该结点所含子树的个数，二叉树结点子树个数最多的那个结点的度为二叉树的度。
