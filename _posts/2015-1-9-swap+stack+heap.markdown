@@ -64,7 +64,7 @@ done
 for file in `ls $1|grep '^patch'|grep 'xz$'`
 do
 mkdir $2/${file::7}
-xz -d $1/$file -C $2/${file::7}
+cp $1/$file  $2/${file::7}
 done
 
 </code></pre>
