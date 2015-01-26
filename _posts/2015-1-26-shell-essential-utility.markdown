@@ -28,7 +28,7 @@ Ashish
 Rani
 </code></pre>
 
-> cut -f2 sname
+> cut -f1 sname
 > 那么显示第1个域；
 
 <pre><code>
@@ -57,7 +57,7 @@ Rani
 14
 15
 </code></pre>
-> paste file1 file2
+> paste file2 file1
 <pre><code>
 11          Vivek
 12          Renuka
