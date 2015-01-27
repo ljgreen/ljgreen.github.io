@@ -21,4 +21,8 @@ set datafile separator ':'
 plot datafile using ($1), '' using ($2)
 </code></pre>
 
-
+> javascript 画图
+<pre><code>
+[hchart资料](http://www.hcharts.cn/api/index.html)
+[hchart演示](http://www.hcharts.cn/demo/index.php)
+</code></pre>
