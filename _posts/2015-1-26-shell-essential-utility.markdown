@@ -1,7 +1,7 @@
 --- 
 layout: posts
 categories: shell
-title:  cut，paste，join，tr，sed，grep--shell script
+title:  cut paste join tr sed grep ex--shell script
 ---
 ##Study something new every day!
 > command **cut** 用来选择文件的一个部分
@@ -174,3 +174,73 @@ tea Red-Lable is good.
 </code></pre>
 
 > grep "word-to-find" {file-name}用来匹配文件中含有要找单词的所有行
+
+>  **ex** 是一个文本编辑器，ex {file name}；以下是进入ex编辑器后的命令操作
+<ol>
+<li>
+p ====> 打印当前行
+</li>
+<li>
+1，$ p ====> 打印整个文件
+</li>
+<li>
+2，p ====> 打印第二行
+</li>
+<li>
+1,5 p ====> 打印1到5行
+</li>
+<li>
+set number ====> 打印时带行号1,2,3...
+</li>
+<li>
+set nonumber ====> 打印时不带行号
+</li>
+<li>
+1,5 d ====> d(delete)删除1-5行
+</li>
+<li>
+1,4 co $ ====> co(copy)将1-4行复制到文件的最后
+</li>
+<li>
+g/linux/ p ====> 匹配文件中所有的linux，打印这些行
+</li>
+<li>
+g /sister/ s/never/always/ ===> 找到文件中包含sister的所有行，并将never用always替换
+</li>
+<li>
+g/brother/ s/XYZ/also/g ===> 第一个g是找到文件中含有brother的所有行，第二个g是将这些含有brother的行中的所有XYZ全都替换成also
+</li>
+<li>
+g /Linux/ s//UNIX/ ===> 等价于g /Linux/ s/Linux/UNIX/
+</li>
+<li>
+g/Linux/ s//UNIX/gc ===> 最后的字符c表示在替换之前需要你选择，如果输入y，那么替换；如果是n，则不替换
+</li>
+<li>
+g/\<Linux\>/p ==>找到文件中含有Linux的所有行，不包括（Linuxs、uLinux）等形式
+</li>
+<li>
+g/^Linux ===> 找到文件开头是Linux的所有行；
+g/Linux $ ===> 找到文件结尾是Linux的所有行；
+g/^$ ===> 找到文件中所有的空白行；
+g/[^/^$] ====> 找到文件中所有的非空行；
+</li>
+<li>
+u ===> u(undo)撤销之前的操作
+</li>
+<li>
+g/[Ll]inux/p ===> [Ll]匹配任何包括这两个字符的字符串，例如Linux、linux
+</li>
+<li>
+g/[^Ll]inux/p ===> [Ll]匹配任何不包括这两个字符的字符串
+</li>
+<li>
+g/\<.o\> ===> 匹配只含有单一o的所有行，不包括good，cool等
+</li>
+<li>
+1,$ s/Linux/&-Unix/p ==> 找到文件中所有含Linux的行，用Linux-Unix替换，&起连接作用
+</li>
+<li>
+1,$ s/[a-z]/\u&/g ==> 将文件小写字母换成大写字母
+</li>
+</ol> 
