@@ -69,6 +69,8 @@ done
 
 </code></pre>
 
+> 处理数据
+
 <pre><code>
 #!/bin/bash
 cat $1|awk -F ":" 'BEGIN {
