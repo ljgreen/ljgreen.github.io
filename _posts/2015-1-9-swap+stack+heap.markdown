@@ -68,6 +68,27 @@ cp $1/$file  $2/${file::7}
 done
 
 </code></pre>
+
+<pre><code>
+#!/bin/bash
+cat $1|awk -F ":" 'BEGIN {
+count=0;
+}
+{
+count=$2;
+while(count){
+ print $1","
+ count--;
+}
+}
+END{
+count=$2;
+while(count){
+ print $1","
+ count--;
+}
+}'
+</code></pre>
 <ol>
 <li>
 二叉树结点的度数指该结点所含子树的个数，二叉树结点子树个数最多的那个结点的度为二叉树的度。
