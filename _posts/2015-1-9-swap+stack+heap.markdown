@@ -91,6 +91,44 @@ while(count){
 }
 }'
 </code></pre>
+
+<pre><code>
+#!/bin/bash
+cat $1|awk -F ":" 'BEGIN {
+ave_rate=0;
+a=0;
+b=0;
+c=0;
+} 
+{
+ave_rate+=$5;
+if($5<0.1){
+a++;
+} else if($5>=0.1 && $5<0.5){
+b++;
+} else if($5>=0.5){
+C++;
+}
+
+} 
+END{
+if($5<0.1){
+a++;
+} else if($5>=0.1 && $5<0.5){
+b++;
+} else if($5>=0.5){
+C++;
+}
+ave_rate/=(a+b+c);
+print "a is ", a;
+print "b is ", b;
+print "c is ", c;
+print "ave_rate is", ave_rate;
+print "a% is ", a/(a+b+c+d+e);
+print "b% is ", b/(a+b+c+d+e);
+print "c% is ", c/(a+b+c+d+e);
+}'
+</code></pre>
 <ol>
 <li>
 二叉树结点的度数指该结点所含子树的个数，二叉树结点子树个数最多的那个结点的度为二叉树的度。
