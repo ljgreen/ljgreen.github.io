@@ -107,7 +107,7 @@ a++;
 } else if($5>=0.1 && $5<0.5){
 b++;
 } else if($5>=0.5){
-C++;
+c++;
 }
 
 } 
@@ -117,16 +117,16 @@ a++;
 } else if($5>=0.1 && $5<0.5){
 b++;
 } else if($5>=0.5){
-C++;
+c++;
 }
 ave_rate/=(a+b+c);
 print "a is ", a;
 print "b is ", b;
 print "c is ", c;
 print "ave_rate is", ave_rate;
-print "a% is ", a/(a+b+c+d+e);
-print "b% is ", b/(a+b+c+d+e);
-print "c% is ", c/(a+b+c+d+e);
+print "a% is ", a/(a+b+c);
+print "b% is ", b/(a+b+c);
+print "c% is ", c/(a+b+c);
 }'
 </code></pre>
 <ol>
