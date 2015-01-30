@@ -129,6 +129,38 @@ print "b% is ", b/(a+b+c);
 print "c% is ", c/(a+b+c);
 }'
 </code></pre>
+
+<pre><code>
+#!/bin/bash
+cat $1|awk -F ":" 'BEGIN {
+id=-1;
+count=0;
+}
+{
+if(id==-1){
+id=$1;
+}
+if(id==$1){
+count++;
+} else {
+print count",";
+count=0;
+count++;
+id=$1;
+}
+}
+END{
+if(id==$1){
+count++;
+print count",";
+} else {
+print count",";
+count=0;
+count++;
+id=$1;
+}
+}'
+</code></pre>
 <ol>
 <li>
 二叉树结点的度数指该结点所含子树的个数，二叉树结点子树个数最多的那个结点的度为二叉树的度。
