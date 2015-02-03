@@ -176,6 +176,22 @@ id=$1;
 </li>
 </ol>
 <ol>
+
+> 将文件按照某个域进行排序
+
+<pre><code>
+#!/bin/bash
+name=$(
+for i in $(awk -F\| '{print $2}' datafile)
+        do
+                echo -n "$i=";echo $i|od -c|awk '{print $2}'
+done|tr -s '\n'|sort -n -t"=" -k 2|awk -F = '{print $1}')
+
+for j in $name
+        do
+                sed -n /${j}/p datafile
+done
+</code></pre>
 > static 作用
 <li>
 static具有隐藏作用，可以在不同的文件中定义同名函数和同名变量，不用担心冲突问题。
