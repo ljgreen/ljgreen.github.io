@@ -1,0 +1,82 @@
+--- 
+layout: posts
+categories: shell
+title:  awk command--shell script
+---
+##Study something new every day!
+>首先创建一个初始文件inven
+<pre><code>
+1. Pen     5  20.00
+2. Pencil 10   2.00
+3. Rubber  3   3.50
+4. Cock    2  45.50
+</code></pre>
+> awk在匹配的时候，可以将匹配的模式放在一个文件中；
+> cat > prn\_pen创建文件prn_pen,在里面输入：
+
+`/Pen/ {print $3}`
+
+> awk -f prn\_pen inven 那么将会用/Pen/来匹配文件inven，并打印其中的第三个域；
+> cat > def\_var创建文件def_var，在里面输入：
+
+`{
+print "Printing Rec. #" NR "(" $0 "),And # of field for this record is " NF
+}`
+> awk -f def\_var inven 那么输出结果是：
+<pre><code>
+Printing Rec. #1(1. Pen     5  20.00),And # of field for this record is 4
+Printing Rec. #2(2. Pencil 10   2.00),And # of field for this record is 4
+Printing Rec. #3(3. Rubber  3   3.50),And # of field for this record is 4
+Printing Rec. #4(4. Cock    2  45.50),And # of field for this record is 4
+</code></pre>
+
+> **NR**表示输入的record的个数；**NF**表示record中域的个数
+
+>我们开始接触BEGIN-END模式
+>
+>在读取数据文件的第一行之前，开始执行BEGIN中的action；
+>
+>在读取数据文件的最后一行之后，才开始执行END中的action。
+<pre><code>
+BEGIN {
+                action 1
+                action 2
+                action N
+             }
+
+{
+	
+}
+END {
+                 action 1
+                 action 2
+                 action N
+          }
+
+</code></pre>
+##
+> 右对齐：
+`printf "|%10s|", na`
+
+> 左对齐：
+`printf "|%-10s|", na`
+
+> 环境变量:**USER**
+`ENVIRON["USER"]`
+
+> 环境变量:**HOME**
+`ENVIRON["HOME"]`
+##
+> system()函数执行系统命令：
+
+`system("rm foo")`
+
+`system("cp foo")`
+> 匹配以1开始，后面跟着两个0，然后是1；
+
+`sed -n '/10\{2\}1/p' demofile2`
+> 匹配以1开始，后面跟着2-4个0，然后是1；
+
+`sed -n '/10\{2,4\}1/p' demofile2`
+
+##
