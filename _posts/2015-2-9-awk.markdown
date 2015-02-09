@@ -17,6 +17,7 @@ title:  awk command--shell script
 `/Pen/ {print $3}`
 
 > awk -f prn\_pen inven 那么将会用/Pen/来匹配文件inven，并打印其中的第三个域；
+
 > cat > def\_var创建文件def_var，在里面输入：
 
 `{
@@ -54,7 +55,6 @@ END {
           }
 
 </code></pre>
-##
 > 右对齐：
 `printf "|%10s|", na`
 
@@ -67,16 +67,20 @@ END {
 > 环境变量:**HOME**
 `ENVIRON["HOME"]`
 ##
+
 > system()函数执行系统命令：
 
 `system("rm foo")`
 
 `system("cp foo")`
+
+
 > 匹配以1开始，后面跟着两个0，然后是1；
 
 `sed -n '/10\{2\}1/p' demofile2`
+
+
 > 匹配以1开始，后面跟着2-4个0，然后是1；
 
 `sed -n '/10\{2,4\}1/p' demofile2`
 
-##
