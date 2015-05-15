@@ -84,3 +84,18 @@ END {
 
 `sed -n '/10\{2,4\}1/p' demofile2`
 
+> 提取FIU的md5指纹
+
+<pre><code>
+#!/bin/bash
+cat $1 | awk -F " " 'BEGIN {
+}
+{
+if($6=="W")
+  print $9;
+}
+END{
+if($6=="W")
+  print $9;
+}'
+</code></pre>
