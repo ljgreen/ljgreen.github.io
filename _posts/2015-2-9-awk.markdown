@@ -99,3 +99,51 @@ if($6=="W")
   print $9;
 }'
 </code></pre>
+> creat FIU data
+<pre><code>
+#!/bin/bash
+SEG=0
+i=0
+count=0
+hash=(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
+cat $1 | while read code
+do
+	for((j=0; j<32; j++)){
+		a=`echo $code | dd bs=1 skip=$j count=1` 
+		count=$[count+1]
+		echo "right"
+		echo $a
+		case $a in
+			"A" | "a") b=10;;
+			"B" | "b") b=11;;
+			"C" | "c") b=12;;
+			"D" | "d") b=13;;
+			"E" | "e") b=14;;
+			"F" | "f") b=15;;
+			*)         b=$[a-48];;
+		esac
+		echo "left"
+		echo $b
+		hash[$i]=$[hash[$i]*16+$b];
+		echo ${hash[$i]}
+		if [ $count -eq 2 ]; then
+			count=0
+			i=$[i+1]
+		fi	
+	}
+	for((k=0; k<16; k++)) {
+		echo -n ${hash[$k]} >> $2
+	}
+	SEG=$[SEG+16]
+	while(( $SEG<4096 ))
+	do
+		echo -n "1" >> $2
+		SEG=$[SEG+1]
+	done
+	SEG=0
+	i=0
+	count=0
+	hash=(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
+done
+</code></pre>
+
