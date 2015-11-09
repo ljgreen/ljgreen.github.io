@@ -84,10 +84,6 @@ while(count){
 }
 }
 END{
-count=$2;
-while(count){
- print $1","
- count--;
 }
 }'
 </code></pre>
@@ -112,21 +108,6 @@ c++;
 
 } 
 END{
-if($5<0.1){
-a++;
-} else if($5>=0.1 && $5<0.5){
-b++;
-} else if($5>=0.5){
-c++;
-}
-ave_rate/=(a+b+c);
-print "a is ", a;
-print "b is ", b;
-print "c is ", c;
-print "ave_rate is", ave_rate;
-print "a% is ", a/(a+b+c);
-print "b% is ", b/(a+b+c);
-print "c% is ", c/(a+b+c);
 }'
 </code></pre>
 
@@ -150,14 +131,6 @@ id=$1;
 }
 }
 END{
-if(id==$1){
-count++;
-print count",";
-} else {
-print count",";
-count=0;
-count++;
-id=$1;
 }
 }'
 </code></pre>
