@@ -95,8 +95,6 @@ if($6=="W")
   print $9;
 }
 END{
-if($6=="W")
-  print $9;
 }'
 </code></pre>
 > creat FIU data
