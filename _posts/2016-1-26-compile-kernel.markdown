@@ -39,3 +39,14 @@ make install;
 * 建立与主机的共享文件夹；
 * 在虚拟机下执行：mount -t vboxsf shared_folder_name /media/share_file 其中shared_folder_name是你建立的共享文件夹的名字，share_file是你的虚拟机中的挂载点，通过share_file你就可以访问主机的文件了
 
+
+> virtual box 虚拟机配置bridged adapter
+
+
+* 在虚拟机**网络**中选择**桥接网卡**；
+* 在**界面名称**中选则和host一样的网络；
+* 在guest系统（我的是ubuntu）右键点击**编辑网络**；
+* 在**wired**下边编辑对应的网卡名称（i.e.，Auto eth1），在IPV4下面选择**manual**，然后添加网络；
+* **address**中的前三位需要与host保持一致，最后一位不同；e.g.，host是167.96.88.114，guest是167.96.88.110；
+* **DNS SERVERS**，**netmask**和**gateway**需要查看主机配置，复制过来就可以了；
+* 最后一步**search domain**必须填写，比如我的网络是学校的网，那么就是**lsu.edu**
