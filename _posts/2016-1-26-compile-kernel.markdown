@@ -26,7 +26,9 @@ make modules_install;
 <li>
 make install;
 </li>
-
+<li>
+update-grub生成grub.cgf文件；
+</li>
 <li>
 修改/boot/grub/grub.cgf文件，将set timeout_style=hidden注释掉，并将set timeout=10，这样在开机的时候
 就能够选择启动内核。
