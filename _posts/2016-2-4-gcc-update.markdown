@@ -1,7 +1,7 @@
 --- 
 layout: posts
 categories: kernel
-title: something related to compiling linux kernel
+title: gcc update in ubuntu system
 ---
 ##Study something new every day!
 > compile linux kernel
@@ -11,16 +11,16 @@ title: something related to compiling linux kernel
 * 下载所需要的软件：
 <ol>
 <li>
-wget http://old-releases.ubuntu.com/ubuntu/pool/universe/g/gcc-3.4/gcc-3.4-base_3.4.6-6ubuntu3_i386.deb；
+wget http://old-releases.ubuntu.com/ubuntu/pool/universe/g/gcc-3.4/gcc-3.4-base_3.4.6-6ubuntu3_i386.deb
 </li>
 <li>
-wget http://old-releases.ubuntu.com/ubuntu/pool/universe/g/gcc-3.4/gcc-3.4_3.4.6-6ubuntu3_i386.deb；
+wget http://old-releases.ubuntu.com/ubuntu/pool/universe/g/gcc-3.4/gcc-3.4_3.4.6-6ubuntu3_i386.deb
 </li>
 <li>
-wget http://old-releases.ubuntu.com/ubuntu/pool/universe/g/gcc-3.4/cpp-3.4_3.4.6-6ubuntu3_i386.deb；
+wget http://old-releases.ubuntu.com/ubuntu/pool/universe/g/gcc-3.4/cpp-3.4_3.4.6-6ubuntu3_i386.deb
 </li>
 <li>
-wget http://old-releases.ubuntu.com/ubuntu/pool/universe/g/gcc-3.4/g++-3.4_3.4.6-6ubuntu3_i386.deb；
+wget http://old-releases.ubuntu.com/ubuntu/pool/universe/g/gcc-3.4/g++-3.4_3.4.6-6ubuntu3_i386.deb
 </li>
 <li>
 wget http://old-releases.ubuntu.com/ubuntu/pool/universe/g/gcc-3.4/libstdc++6-dev_3.4.6-6ubuntu3_i386.deb
@@ -31,21 +31,21 @@ wget http://old-releases.ubuntu.com/ubuntu/pool/universe/g/gcc-3.4/libstdc++6-de
 
 <ol>
 <li>
-sudo dpkg –-force-depends –i gcc-3.4-base_3.4.6-6ubuntu3_i386.deb
+sudo dpkg --force-depends -i gcc-3.4-base_3.4.6-6ubuntu3_i386.deb
 </li>
 <li>
-sudo dpkg –-force-depends –i gcc-3.4_3.4.6-6ubuntu3_i386.deb
+sudo dpkg --force-depends -i gcc-3.4_3.4.6-6ubuntu3_i386.deb
 </li>
 <li>
-sudo dpkg –-force-depends -i 
+sudo dpkg --force-depends -i 
 cpp-3.4_3.4.6-6ubuntu3_i386.deb
 </li>
 <li>
-sudo dpkg –-force-depends -i 
+sudo dpkg --force-depends -i 
 g++-3.4_3.4.6-6ubuntu3_i386.deb
 </li>
 <li>
-sudo dpkg –-force-depends -i 
+sudo dpkg --force-depends -i 
 libstdc++6-dev_3.4.6-6ubuntu3_i386.deb
 </li>
 </ol>
